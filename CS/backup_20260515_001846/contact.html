@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Collectives</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="contact-page">
+  <header class="site-header">
+    <div class="topbar">
+      <p>Need Help? 0967-214-0798</p>
+      <p class="topbar-center">WELCOME TO COLLECTIVES</p>
+      <div class="top-actions">
+      </div>
+    </div>
+
+    <div class="nav-bar">
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </nav>
+      <a class="logo-link" href="index.html">
+        <img class="logo-img" src="images/cslogo.jpg" alt="Collectives logo">
+      </a>
+      <div class="nav-icons">
+        <button class="icon-button">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-head">
+      <div>
+      </div>
+    </section>
+
+    <section class="contact-hero">
+      <div class="contact-hero-copy">
+        <p class="section-label">Contact Us</p>
+        <h2>Howdy! Tell Us About Your Thinking</h2>
+        <p class="section-description">Contact us with your details & ready to start. Let us provide a message & contact us!</p>
+      </div>
+      <div class="contact-hero-illustration">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="Contact illustration">
+      </div>
+    </section>
+
+    <section class="contact-grid">
+      <article class="form-card">
+        <h2>Send A Message</h2>
+        <p class="form-note">Ask us anything here</p>
+
+        <form>
+          <div class="field-row">
+            <label for="first-name">Name <span>*</span></label>
+            <div class="split-fields">
+              <div>
+                <input id="first-name" type="text" placeholder="First">
+              </div>
+              <div>
+                <input id="last-name" type="text" placeholder="Last">
+              </div>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label for="email">Email <span>*</span></label>
+            <input id="email" type="email" placeholder="Enter your email">
+          </div>
+
+          <div class="field-row">
+            <label for="message">Comment or Message</label>
+            <textarea id="message" rows="6" placeholder="Type your message"></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </article>
+
+      <aside class="info-card">
+        <div>
+          <h2>Contact Information</h2>
+          <div class="info-item">
+            <span>✉</span>
+            <a href="mailto:cscollectives@gmail.com">cscollectives@gmail.com</a>
+          </div>
+          <div class="info-item">
+            <span>📞</span>
+            <a href="tel:09672140798">0967-214-0798</a>
+          </div>
+        </div>
+
+        <div class="social-block">
+          <h2>Follow Us</h2>
+          <div class="info-item">
+            <span></span>
+            <a href="#">Facebook</a>
+          </div>
+          <div class="info-item">
+            <span></span>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <script>
+    // Page transition animation
+    document.querySelectorAll('a[href]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && !href.startsWith('#') && !href.startsWith('http')) {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
